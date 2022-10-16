@@ -1,4 +1,5 @@
-﻿using HealthyME.Models;
+﻿using HealthyME.Data;
+using HealthyME.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,9 +9,9 @@ namespace HealthyME.Controller
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly UserContext _userContext;
+        private readonly HEMDbContext _userContext;
 
-        public UserController(UserContext userContext)
+        public UserController(HEMDbContext userContext)
         {
             _userContext = userContext;
         }
