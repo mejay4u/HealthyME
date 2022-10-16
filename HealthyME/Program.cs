@@ -1,3 +1,4 @@
+using HealthyME.Data;
 using HealthyME.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,8 +14,8 @@ namespace HealthyME
             builder.Services.AddAuthorization();
             builder.Services.AddControllers();
 
-            builder.Services.AddDbContext<UserContext>(options=>
-             options.UseSqlServer(builder.Configuration.GetConnectionString("HEM")));
+            builder.Services.AddDbContext<HEMDbContext>(options =>
+           options.UseSqlServer(builder.Configuration.GetConnectionString("HEM")));
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -28,6 +29,8 @@ namespace HealthyME
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseHttpsRedirection();
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
 
             app.UseAuthorization();
 
