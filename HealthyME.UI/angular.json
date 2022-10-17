@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "HealtyME.UI": {
+    "HealthyME.UI": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/healty-me.ui",
+            "outputPath": "dist/healthy-me.ui",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "HealtyME.UI:build:production"
+              "browserTarget": "HealthyME.UI:build:production"
             },
             "development": {
-              "browserTarget": "HealtyME.UI:build:development"
+              "browserTarget": "HealthyME.UI:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "HealtyME.UI:build"
+            "browserTarget": "HealthyME.UI:build"
           }
         },
         "test": {
@@ -97,8 +97,5 @@
         }
       }
     }
-  },
-  "cli": {
-    "analytics": "dce26083-aac1-4c89-b42d-9965b97f689b"
   }
 }
